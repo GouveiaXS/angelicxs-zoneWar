@@ -49,6 +49,11 @@ CreateThread(function()
             	PlayerJob = playerData.gang.name
 			end
         end)
+	RegisterNetEvent('QBCore:Client:OnGangUpdate', function(InfoGang)
+            if Config.QBCoreUseGangs and InfoGang ~= 'none' then
+            	PlayerJob = InfoGang
+		end
+	end)
     end
 end)
 
